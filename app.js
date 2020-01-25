@@ -1,5 +1,7 @@
 //Node.js ==> Express Framework (SIMPLE SERVER)
 const express = require("express");
+var exphbs = require('express-handlebars');
+
 let app = express();
 //Port to listen on
 const PORT = 3000;
@@ -11,7 +13,8 @@ const bodyParser = require("body-parser");
 const bootstrap = require("./src/boostrap");
 
 //Use a Custom Templating Engine
-app.set("view engine", "pug");
+app.engine('handlebars', exphbs());
+app.set('view engine', 'handlebars');
 
 app.set("views", path.resolve("./src/views"));
 
@@ -29,10 +32,11 @@ bootstrap(app, router);
 
 //Main Page (Home)
 router.get("/", (req, res, next) => {
-  return res.send({
-    sttatus: "success",
+  res.render('home');
+  /* return res.send({
+    status: "success",
     message: "Hey from the server!"
-  });
+  }); */
 });
 
 router.use((err, req, res, next) => {

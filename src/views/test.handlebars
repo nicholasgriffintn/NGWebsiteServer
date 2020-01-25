@@ -1,0 +1,74 @@
+<style type="text/css">
+    .single-page .App-header {
+        height: auto !important;
+        padding-top: 0 !important;
+        position: relative
+    }
+
+    .single-page .App-content {
+        top: 0 !important;
+        padding: 1rem;
+        text-align: left;
+        min-height: 150px;
+        width: calc(100% - 2rem)
+    }
+
+    img.post-image {
+        width: 100%;
+        height: auto
+    }
+
+    .post-content-wrap {
+        max-width: 780px;
+        width: calc(100% - 2rem);
+        margin: auto;
+        padding: 1rem
+    }
+
+    .post-buttons-wrapper .button {
+        background: #fff;
+        font-size: .7rem;
+        opacity: 1;
+        border-radius: 0;
+        padding: 0;
+        cursor: pointer;
+        color: #000;
+        margin: 0;
+        line-height: .7rem
+    }
+
+    .post-buttons-wrapper {
+        margin-top: .5rem
+    }
+
+    @media (max-width:780px) {
+        .post-header-titles {
+            margin-top: 0 !important
+        }
+    }
+</style>
+
+<div class="single-page">
+    <div class="header-single-image-full">
+    </div>
+    <div class="App-content">
+        <div class="ui container">
+            <div class="post-header">
+                <div class="post-header-titles">
+                    <h1 id="single-title" class="animated bounceInDown">Testing service side rendered content</h1>
+                    <hr>
+                </div>
+            </div>
+            <div class="post-content-wrap">
+                <h2 id="single-title" class="animated bounceInDown">
+                    This Should have some details from the db below.
+                </h2>
+                <div>
+                    {{#tests}}
+                    <p>{{name}} - {{type}}</p>
+                    {{/tests}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
