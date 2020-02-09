@@ -1,5 +1,7 @@
 # nicholas-griffin-server
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/nicholasgriffintn/NGWebsiteServer.svg?token=dd773cf62e77ed1836793d66d671ffbd3cc20c7431e2883f75649268d7055561&ts=1581260842898)](https://greenkeeper.io/)
+
 ## Install and Use
 
 ```sh
